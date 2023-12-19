@@ -1,0 +1,26 @@
+Adding file to this folder should automatically make server load it and clients to display it.
+It must be named "categoryN.txt" where N is a number, from 1 to whatever.
+
+StartUI class has variable "maxCategoriesToSendToClient" that specifies how many of them can be send to the client.
+If there are more files than value of that variable then random categories will be sent.
+
+Characters that can be used in the files are specified by the StartUI's keys variable.
+But changing that variable to add support for special characters in undefined behavior.
+Most likely UI will be messed up. If I have time I might fix that.
+
+File format:
+    First line of each category is its name.
+    Each other line is the word that user can guess.
+    Words can have spaces, upper / lower case letters are ignored, can't have numbers and symbols.
+    So only upper/lower case letters and spaces.
+
+    If there will be other symbols or special characters (not defined in StartUI.keys) user will never be able to
+    guess that word.
+
+    Words shouldn't be too long as that will also mess up client's UI. If I design the UI and don't forget I will
+    update this file to specify what is the max amount of characters in one line.
+
+    MAX RECOMMENDED LENGTH IS 18
+
+Project specifies that only 3 categories must be selectable, but giving the server ability
+to read arbitrary number of categories doesn't hurt.

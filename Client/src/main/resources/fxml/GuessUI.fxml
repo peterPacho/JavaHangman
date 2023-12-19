@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuessUIController" fx:id="GuessUI"
+          styleClass="mainGridPane" onKeyTyped="#keyTyped">
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <Label fx:id="labelCategory" styleClass="labelCategory" GridPane.rowIndex="0"/>
+
+    <VBox GridPane.rowIndex="1">
+        <AnchorPane>
+            <HBox fx:id="letterContainerMaster" styleClass="letterContainerMaster" GridPane.hgrow="ALWAYS"
+                  maxWidth="Infinity" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0" alignment="CENTER">
+
+            </HBox>
+
+        </AnchorPane>
+
+        <AnchorPane>
+            <Label fx:id="roundResult" styleClass="roundResult" maxWidth="Infinity" alignment="CENTER"
+                   AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" textAlignment="CENTER"/>
+        </AnchorPane>
+    </VBox>
+    <AnchorPane GridPane.rowIndex="2">
+        <HBox AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0" alignment="CENTER">
+            <VBox fx:id="keyboardContainer" styleClass="keyboardContainer">
+                <HBox fx:id="keyboard1"/>
+                <HBox fx:id="keyboard2"/>
+                <HBox fx:id="keyboard3"/>
+            </VBox>
+            <VBox fx:id="heartContainer"/>
+        </HBox>
+    </AnchorPane>
+
+
+    <AnchorPane GridPane.rowIndex="3">
+        <HBox fx:id="buttonContainer" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" alignment="CENTER">
+            <Button fx:id="buttonBack" text="Give up" onAction="#returnToCategoryUI"
+                    styleClass="buttonBack">
+                <tooltip>
+                    <Tooltip text="(loser)" showDelay="300ms"/>
+                </tooltip>
+            </Button>
+        </HBox>
+    </AnchorPane>
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="20" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" percentHeight="25" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" percentHeight="40" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" percentHeight="15" vgrow="SOMETIMES"/>
+    </rowConstraints>
+</GridPane>
+

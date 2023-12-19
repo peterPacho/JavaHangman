@@ -1,0 +1,67 @@
+/*
+    Category display styles
+*/
+.categoryContainerHBox
+{
+    -fx-font-size: 40px;
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 4px;
+}
+
+.categoryContainerHBoxDisabled
+{
+    -fx-text-fill: rgb(150, 150, 150);
+    -fx-cursor: none;
+}
+
+.categoryContainerHBoxDisabled .text
+{
+    -fx-strikethrough: true;
+}
+
+.categoryContainerHBoxFailed
+{
+    -fx-background-color: rgba(100%, 0%, 0%, 0.5);
+}
+
+.categoryContainerHBoxCompleted
+{
+    -fx-background-color: rgba(0%, 100%, 0%, 0.5);
+}
+
+.categoryTitle
+{
+}
+
+.categoryLives
+{
+}
+
+.categoryHeartImageView
+{
+    -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
+}
+
+.labelPickWordCatTitle
+{
+    -fx-font-size: 30px;
+}
+
+.labelResult
+{
+    -fx-font-size: 25px;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+}
+
+.vboxMain
+{
+    -fx-background-image: url("/img/background.jpg");
+}
+
+.button
+{
+    -fx-font-size: 20px;
+}

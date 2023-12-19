@@ -1,0 +1,9 @@
+Computer Parts
+Central Processing Unit
+Hard Drive
+Random Access Memory
+Motherboard
+Monitor
+Printer
+Solid State Drive
+Graphics Card

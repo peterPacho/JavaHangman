@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="ServerController"
+          prefHeight="600" prefWidth="800">
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <!-- Left column - some statistics -->
+    <VBox prefWidth="200" GridPane.columnIndex="0">
+        <Label fx:id="label_port"/>
+        <Label fx:id="label_uptime" text="Server uptime: 00:00:00">
+            <VBox.margin>
+                <Insets bottom="10"/>
+            </VBox.margin>
+        </Label>
+
+        <Label fx:id="label_clients" text="Connected clients: 0"/>
+        <Label fx:id="label_totalClients" text="Total clients: 0"/>
+    </VBox>
+
+    <!-- Right column - log and buttons for the log -->
+    <VBox GridPane.columnIndex="1" spacing="5">
+        <ScrollPane fx:id="log_container" vvalue="1.0" fitToWidth="true" VBox.vgrow="SOMETIMES">
+            <VBox fx:id="log_vbox"/>
+        </ScrollPane>
+
+        <HBox GridPane.rowIndex="1" spacing="5">
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="button_print_time" text="Print time ON" onAction="#printTimeButtonClick"/>
+            <Button fx:id="button_clearlog" text="Clear log" onAction="#clearLogButtonClick"/>
+            <Button fx:id="button_autoscroll" text="Auto-scroll ON" onAction="#autoscrollToggleButtonClick">
+                <tooltip>
+                    <Tooltip text="Toggles auto-scrolling of the log window on/off"/>
+                </tooltip>
+            </Button>
+        </HBox>
+    </VBox>
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="80" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="100" vgrow="SOMETIMES"/>
+    </rowConstraints>
+</GridPane>

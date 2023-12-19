@@ -1,0 +1,105 @@
+/*
+    Keyboard buttons.
+    All of the buttons have keyboardKeyMain added.
+    Enabled keys also ket keyboardKeyEnabled added
+ */
+
+.keyboardKeyMain
+{
+    -fx-alignment: center;
+    -fx-min-height: 50px;
+    -fx-min-width: 50px;
+    -fx-font-size: 48px;
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    -fx-background-radius: 10px;
+}
+
+.keyboardKeyEnabled
+{
+    -fx-cursor: hand;
+}
+
+.keyboardKeyEnabled:hover
+{
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+}
+
+.keyboardKeyDisabled
+{
+    -fx-text-fill: rgb(150, 150, 150);
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*set if guessed correctly */
+.keyboardKeyDisabledCorrect
+{
+    -fx-background-color: rgba(0%, 100%, 0%, 0.5);
+}
+
+.keyboardKeyDisabledFailed
+{
+    -fx-background-color: rgba(100%, 0%, 0%, 0.5);
+}
+
+.keyboardKeyDisabled:hover
+{
+
+}
+
+.keyboardContainer
+{
+
+}
+
+.labelCategory
+{
+    -fx-font-size: 35px;
+}
+
+/*
+    This is the label that displays single character of the word that user is guessing
+    Size of text and label is changed in createWordLetters() !
+*/
+.wordChar
+{
+    -fx-alignment: center;
+    -fx-background-color: rgba(0%, 0%, 0%, 0.1);
+    -fx-background-radius: 10px;
+}
+
+/* is the character is space this gets applied */
+.wordCharSpace
+{
+    -fx-alignment: center;
+}
+
+.wordCharOk
+{
+    -fx-background-color: rgba(0%, 100%, 0%, 0.5);
+}
+
+.wordCharWrong
+{
+    -fx-background-color: rgba(100%, 0%, 0%, 0.5);
+}
+
+.letterContainerMaster
+{
+    
+}
+
+.roundResult
+{
+    -fx-font-size: 40px;
+    -fx-text-fill: green;
+}
+
+.buttonBack
+{
+    -fx-font-size: 20px;
+}
+
+.mainGridPane
+{
+    -fx-background-image: url("/img/background.jpg");
+}
